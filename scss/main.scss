@@ -1,0 +1,60 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  .source-text-column{
+    &__text{
+      &:hover{
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+      }
+      &:focus{
+        box-shadow: inset 0 0 5px rgba(0, 64, 128, 0.9);
+        border-color:rgba(0, 64, 128, 0.5);
+        outline:none;
+      }
+    }
+  }
+  .target_text_column{
+    &__text{
+      background: rgba(0,0,0,.1);
+      border-color:rgba(0,0,0,.1);
+      &:focus{
+        outline:none;
+      }
+     }
+  }
+  .text-column{
+    width:50%;
+  }
+  .select{
+    display: inline-block;
+    margin-top: 20px;
+  }
+  .text{
+    @extend .select;
+    width: 90%;
+    font: 600 20px Arial;
+    padding: 20px 20px 32px;
+    resize: none;
+  }
+}
+.button{
+  background: #357ae8;
+  border:1px solid #357ae8;
+  padding:8px;
+  font-weight:bold;
+  color:#fff;
+}
+.map{
+   width:70%;
+   heigth:400px;
+   margin:5% auto;
+}
+
+@media screen and (max-width: 873px){
+  .form{
+    .text-column{
+      width:100%;
+    }
+  }
+
+}
